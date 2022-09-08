@@ -1,0 +1,9 @@
+model{
+  # sampling model
+  for(i in 1:N){
+    y[i]~dbern(pi)
+  }
+  
+  # prior
+  pi~dbeta(2,3)
+}
